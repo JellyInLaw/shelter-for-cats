@@ -1,7 +1,7 @@
-# shelter for cats
+# shelter-for-cats
 
 test task
-https://jellyinlaw.github.io/shelter_for_cats/
+https://jellyinlaw.github.io/shelter-for-cats/
 
 ТЗ
 
