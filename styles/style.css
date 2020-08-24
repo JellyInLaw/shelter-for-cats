@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background-color: rgb(227, 227, 227);
+}
+
+.container {
+  width: 500px;
+  margin: 100px auto;
+}
+
+.tabs-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tabs-block__tab {
+  cursor: pointer;
+  padding: 8px 16px;
+  color: white;
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.38);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(rgb(23, 133, 178), rgb(33, 101, 170));
+}
+
+.tabs-block__tab.current-tab {
+  background: white;
+  color: black;
+  text-shadow: none;
+  font-weight: 100;
+}
+
+.tabs-block__tab:not(:last-child) {
+  margin-right: 7px;
+}
+
+.main-block {
+  height: auto;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+}
+
+.main-block__wrapper {
+  display: flex;
+  justify-content: start;
+}
+
+.user-photo {
+  max-width: 136px;
+  border-radius: 5px;
+  display: block;
+}
+
+.add-friend-button {
+  cursor: pointer;
+  padding: 8px 16px;
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.43);
+  font-size: 12px;
+  color: white;
+  background: linear-gradient(rgb(230, 130, 30), rgb(230, 80, 30));
+  border: none;
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.38);
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+.add-friend-button:hover {
+  background: linear-gradient(rgb(230, 80, 30), rgb(230, 80, 30));
+}
+
+.add-friend-button:active {
+  box-shadow: none;
+}
+
+.main-block__right-main {
+  margin-left: 20px;
+}
+
+.user-name {
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 0.91;
+  margin-top: 5px;
+}
+
+.main-block__user-name input {
+  font-size: 23px;
+  margin-bottom: 0;
+  padding-left: 3px;
+}
+
+.main-block__user-city input {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.91;
+  color: #757575;
+  padding-left: 3px;
+}
+
+.user-city {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.91;
+  color: #757575;
+}
+
+.user-info {
+  display: table;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+.family-status,
+.phone,
+.email {
+  display: table-row;
+}
+
+.family-label,
+.family-value,
+.phone-label,
+.phone-value,
+.email-label,
+.email-value {
+  display: table-cell;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.family-status input,
+.phone input,
+.email input {
+  width: 125px;
+  padding-left: 3px;
+}
+
+.col1 {
+  display: table-column;
+  width: 170px;
+}
+
+.interests {
+  margin-top: 30px;
+}
+
+.interests-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.interests-list__item {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.92;
+  color: #1574af;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 0 8px;
+  margin-bottom: 3px;
+}
+
+.interests-list__item:not(:last-child) {
+  margin-right: 3px;
+}
+
+.interests-list__item:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.interests-list__item:hover {
+  color: black;
+}
+
+.friend-list {
+  height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.friend-list__item {
+  min-width: 226px;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 19px;
+}
+
+.friend-list__item img {
+  display: block;
+  margin-right: 10px;
+  width: 61px;
+  height: 62px;
+  border-radius: 2px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.friend-name {
+  font-size: 13px;
+  color: #1574af;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.friend-city {
+  font-size: 11px;
+}
+
+.is-online {
+  margin-top: auto;
+  font-size: 10px;
+  color: #2f8a26;
+}
+
+.friend-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.friend-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.friend-list::-webkit-scrollbar-track:horizontal {
+  display: none;
+}
+
+.friend-list::-webkit-scrollbar-thumb {
+  background-color: rgb(33, 101, 170);
+  border-radius: 5px;
+}
+
+.input-block {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input-block__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-block__form input[id="add-interest"] {
+  padding: 6px 10px;
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.input-block__form input[id="submit"] {
+  cursor: pointer;
+  padding: 8px 16px;
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.43);
+  font-size: 12px;
+  color: white;
+  background: linear-gradient(rgb(230, 130, 30), rgb(230, 80, 30));
+  border: none;
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.38);
+  border-radius: 5px;
+}
+
+.input-block__form input[id="submit"]:hover {
+  background: linear-gradient(rgb(230, 80, 30), rgb(230, 80, 30));
+}
+
+.input-block__form input[id="submit"]:active {
+  box-shadow: none;
+}
+
+@media (max-width: 520px) and (min-width: 320px) {
+  .container {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .main-block__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .left-aside {
+    margin-bottom: 20px;
+  }
+
+  .main-block {
+    height: auto;
+  }
+
+  .user-photo {
+    max-width: 100%;
+  }
+
+  .add-friend-button {
+    width: 100%;
+  }
+
+  .main-block__right-main {
+    margin-left: 0px;
+  }
+
+  .user-info {
+    display: table;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 30px;
+  }
+
+  .info-value {
+    cursor: pointer;
+  }
+
+  .family-status,
+  .phone,
+  .email {
+    display: block;
+  }
+
+  .family-label,
+  .family-value,
+  .phone-label,
+  .phone-value,
+  .email-label,
+  .email-value {
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .friend-list {
+    height: auto;
+  }
+
+  .friend-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .form__label {
+    width: 50px;
+  }
+}
+
+.hidden {
+  display: none;
+}
